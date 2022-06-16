@@ -2,6 +2,7 @@ package ademir.lojavirtual.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,6 +20,7 @@ public class MarcaProduto implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_marca_produto")
 	private Long id;
+	@Column(nullable = false)
 	private String nomeDesc;
 	public Long getId() {
 		return id;
@@ -35,5 +37,6 @@ public class MarcaProduto implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+	
 	
 }
